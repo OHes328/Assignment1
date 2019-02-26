@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{%load staticfiles%}
+<head>
+    <title>ES_wordcount</title>
+    <link rel="wordcount_stylesheet" type="text/css" href="{% static 'wordcount/style.css'%}">
+</head>
+
+<img src="{% static 'wordcount/BTS.PNG' %}">
+
+
+<header>
+    <div class ="home-header">
+    <h1>WordCount</h1>
+    </div>
+</header>
+
+<body>
+    <h2>You Can count the number of words here!</h2>
+    <a href="{%url 'about'%}">About</a>
+
+    <form action="{%url 'result'%}">
+        <textarea cols="40" rows="10" name="fulltext"></textarea>
+        <br>
+        <input type="submit" value="Count!">
+    </form>
+</body>
+
+</html>
